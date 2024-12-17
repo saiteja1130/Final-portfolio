@@ -1,0 +1,416 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('img/pixelcut-export\ \(1\).jpeg');
+    height: 100vh; 
+    width: 100%;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white;
+    background-attachment: fixed;
+  }
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 8px 50px;
+    border-bottom:1.5px solid white ;
+    background: inherit;
+    backdrop-filter: blur(8px);
+    position: relative;
+    position: sticky;
+    top: 0;
+}
+.nav-brand h1{
+    font-size: 2rem;
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+    list-style: none;
+    transition: transform 0.5s ease-in-out;
+}
+.nav-link:hover{
+    border-bottom: 1.2px solid white;
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+}
+
+#open-menu,#close-menu{
+    display: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.welcome{
+    width: 100%;
+    height: 80vh;
+    place-content: center;
+    display: block;
+    padding-left: 250px;
+}
+.name h1{
+    font-size: 4rem;
+}
+.resume-link button{
+    background-color: inherit;
+    color: white;
+    padding: 10px 25px;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.resume-link button:hover{
+    background-color: white;
+    color: black;    
+}
+.about-me{
+    padding: 20px 50px;
+    border: 1px solid white;
+    background-color: inherit;
+    backdrop-filter: blur(8px);
+}
+.about-me-head{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+
+}
+.about-me-para p{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.education-details{
+    border: 1px solid white;
+    margin-top: 25px;
+    padding: 15px 50px;
+    margin-bottom: 25px;
+}
+.education-details h1{
+    font-size: 2rem;
+    text-align: center;
+
+}
+.education-details-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px 0;
+}
+.class{
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 15px 30px;
+    background-color: inherit;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: 0.5s all;
+    margin-bottom: 25px;
+}
+.class:hover{
+    transform: scale(1.05);
+}
+.class h2{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+.class h4{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.class p{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.skills ,.project,.contact-me,.socail-media{
+    border: 1px solid white;
+    padding: 15px 50px;
+    background-color: inherit;
+    backdrop-filter: blur(8px);
+    margin-bottom: 25px;
+}
+.skills caption{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+.skills table{
+    width: 100%;
+    border: 1px solid white;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+.skills table tr td{
+    padding: 10px 50px;
+    font-size: 1.2rem;
+}
+.other-skills ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+.other-skills ul li img{
+    width: 50px;
+}
+.other-skills ul li:hover{
+    transform: scale(1.1);
+}
+.other-skills ul li{
+    border: 1px solid white;
+    border-radius: 8px;
+    padding:8px 15px;
+    transition: 0.5s all;
+}
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+}
+.project h1{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.project-1{
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+.project-1:hover{
+    transform: scale(1.02);
+}
+.project-1 h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.project-1 h5{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+.project-1 p{
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.project-1 a{
+    color: white;
+    text-decoration: none;
+    border: 1px white solid;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.5s all;
+}
+.project-1 a:hover{
+    background-color: white;
+    color: black;
+}
+.contact-me h1{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+form label{
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+form input,textarea,select{
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+textarea{
+    resize: none;
+}
+form button{
+    padding: 8px 15px;
+    width: 20%;
+    margin:25px auto;
+}
+
+.socail-media ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.socail-media ul li a{
+    font-size: 1.8rem;
+    color: white;
+}
+
+@media only screen and (max-width:768px) {
+    .nav-container{
+        padding: 5px 15px;
+    }
+    .nav-brand h1{
+        font-size: 1.8rem;
+    }
+    .nav-list{
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        gap: 12px;
+        width: 100%;
+        background-color: white;
+        padding: 15px;
+        transform: translateY(-115%);
+        transition: 0.5s ease-in;
+    }
+    .nav-item{
+        border: 1px solid black;
+        width: 100%;
+        padding: 10px 5px;
+        border-radius: 5px;
+    }
+    .nav-link{
+        color: black;
+    }
+    #open-menu{
+        display: block;
+    }
+    .welcome{
+        padding: 0 20px;
+        height: 50vh;
+        display: block;
+        margin: 0 auto;
+    }
+    .name h1{
+        font-size: 2rem;
+    }
+    .about-me, .skills, .project, .contact-me {
+        margin: 15px;
+        padding: 5px 10px;
+    }
+    .about-me-head{
+        font-size: 1rem;
+    }
+    .about-me-para p{
+        font-size: 1rem;
+    }
+    
+    .education-details{
+        border: 1px solid white;
+        margin-top: 25px;
+        padding: 15px 30px;
+        margin: 0 15px;
+
+    }
+    .education-details h1{
+        font-size: 1.5rem;
+        text-align: center;
+    
+    }
+    .education-details-flex{
+        padding: 10px 0;
+    }
+    .class{
+        padding: 5px 10px;
+    }
+    .class:hover{
+        transform: scale(1);
+    }
+    .class h2{
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .class h4{
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+    .class p{
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+    .skills table tr td{
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    .skills table caption{
+        font-size: 1rem;
+    }
+    .other-skills ul li img{
+        width: 25px;
+    } 
+    .project,.contact-me{
+        padding: 5px 10px;
+    }
+    .projects{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .project-1 h3{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    .project-1 h5{
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .project-1 p{
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+    .project-1 a{
+        font-size: 0.9rem;
+    }
+    .contact-me form{
+        width: 90%;
+    }
+    form label{
+        font-family: 0.9rem;
+        margin: 5px 0;
+
+    }
+    form input,textarea,select{
+        padding: 5px;
+    }
+    form button{
+        width: 50%;
+        background-color: white;
+        color: black;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+
+    }
+    .socail-media{
+        margin: 15px;
+        padding: 5px 10px;
+    }
+    .socail-media ul{
+        gap: 18px;
+        justify-content: center;
+    }
+
+}
+  
