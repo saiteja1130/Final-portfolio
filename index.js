@@ -38,6 +38,8 @@ navItem.forEach(navMenu=>{
             projectCon.classList.add("hidden");
             contactMe.classList.remove("visible");
             contactMe.classList.add("hidden");
+            sucessBox.classList.add("hidden");
+            sucessBox.classList.remove("visible");
             
         }
         else if(navMenu.innerText=="About Me"){
@@ -51,6 +53,8 @@ navItem.forEach(navMenu=>{
             projectCon.classList.add("hidden");
             contactMe.classList.remove("visible");
             contactMe.classList.add("hidden");
+            sucessBox.classList.add("hidden");
+            sucessBox.classList.remove("visible");
            
         }
         else if(navMenu.innerText=="Skills"){
@@ -64,6 +68,8 @@ navItem.forEach(navMenu=>{
             projectCon.classList.add("hidden");
             contactMe.classList.remove("visible");
             contactMe.classList.add("hidden");
+            sucessBox.classList.add("hidden");
+            sucessBox.classList.remove("visible");
         }
         
         else if(navMenu.innerText=="Projects"){
@@ -77,6 +83,8 @@ navItem.forEach(navMenu=>{
             projectCon.classList.remove("hidden");
             contactMe.classList.remove("visible");
             contactMe.classList.add("hidden");
+            sucessBox.classList.add("hidden");
+            sucessBox.classList.remove("visible");
         }
         else{
             homeCon.classList.remove("visible");
@@ -89,6 +97,8 @@ navItem.forEach(navMenu=>{
             projectCon.classList.add("hidden");
             contactMe.classList.add("visible");
             contactMe.classList.remove("hidden");
+            sucessBox.classList.add("hidden");
+            sucessBox.classList.remove("visible");
         }
         
     })
@@ -105,12 +115,14 @@ contactMeIcon.addEventListener("click",()=>{
             projectCon.classList.add("hidden");
             contactMe.classList.add("visible");
             contactMe.classList.remove("hidden");
+            sucessBox.classList.add("hidden");
+            sucessBox.classList.remove("visible");
 })
 
 submitBtn.addEventListener("click",()=>{
     sucessBox.classList.add("visible");
     contactMe.classList.remove("visible");
-    contactMe.classList.add("hide");
+    contactMe.classList.add("hidden");
 })
 afterSubmitBtn.addEventListener("click", ()=>{
     homeCon.classList.add("visible");
