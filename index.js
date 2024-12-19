@@ -8,6 +8,9 @@ let skillCon=document.querySelector(".skills-box");
 let projectCon=document.querySelector(".projects-box");
 let contactMe=document.querySelector(".contact-me-section");
 let contactMeIcon=document.querySelector(".email-icon");
+let submitBtn=document.querySelector(".submit-btn");
+const afterSubmitBtn=document.getElementById("after-submit");
+const sucessBox=document.querySelector(".success-box");
  //navItem queryselectorAll returns a node of classes list with the same name
  //loop through each node using foreach method
  //add an element to catch the every element(navActive)
@@ -104,5 +107,14 @@ contactMeIcon.addEventListener("click",()=>{
             contactMe.classList.remove("hidden");
 })
 
-
-
+submitBtn.addEventListener("click",()=>{
+    sucessBox.classList.add("visible");
+    contactMe.classList.remove("visible");
+    contactMe.classList.add("hide");
+})
+afterSubmitBtn.addEventListener("click", ()=>{
+    homeCon.classList.add("visible");
+    homeCon.classList.remove("hidden");
+    sucessBox.classList.remove("visible");
+    sucessBox.classList.add("hidden");
+})
