@@ -86,6 +86,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+
 }
 .about-me{
     display: none;
@@ -136,12 +138,160 @@ body{
     line-height: 25px;
 }
 .hidden{
-    display: none;
+    display: none !important;
 }
 .visible{
-    display: block;
+    display: block !important;
 }
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    padding:0 150px ;
+    animation: fade 1.5s ease-in-out ;
+}
+.skills-box{
+    display: none;
+}
+.skill-side h1{
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+.skill-side p{
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+.skill-side ul li{
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.projects-box{
+    display: none;
+}
+.projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.project-details h1{
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+.project-details>p{
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+.project-details h2{
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+.project-details h3{
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+.project-details p{
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+.project-details button{
+    padding:  8px 20px;
+    margin-top: 20px;
+    background-color: inherit;
+    border: 1px solid;
+    border-radius: 8px;
+}
+.project-details button a{
+    font-size: 1.1em;
+}
+.contact-me{
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+}
+.email-icon{
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    cursor: pointer;
+    transition: 0.5s all;
+    background-color: black;
 
+}
+.email-icon:hover{
+    transform: scale(1.1);
+
+}
+.email-icon i{
+    font-size: 1.5em;
+    color: #fff;
+}
+.contact-me-section{
+    width: 50%;
+    margin: auto;
+    display: none;
+}
+.contact-me-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 25px;
+}
+.contact-me-form h1{
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+.contact-me-form label{
+    color: black;
+    margin-left: 10px;
+}
+.contact-me-form input{
+    padding: 8px 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+
+}
+.contact-me-form input::placeholder{
+    color: rgb(0, 0, 0);
+}
+.contact-me-form textarea{
+    border: 1px solid black;
+    resize: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+}
+.contact-me-form form button{
+    background-color: black;
+    padding: 8px 15px;
+    width: 20%;
+    margin: auto;
+    color: #fff;
+    border-radius: 8px;
+}
 @media only screen and (max-width:992px) {
     .navbar-nav{
         flex-direction: row;
@@ -176,6 +326,73 @@ body{
     }
     .navbar-nav .nav-item:last-child{
         display: none;
+    }
+    .skills{
+        gap: 30px;
+        padding:0 15px ;
+    }
+    .skill-side h1{
+        font-size: 1.2em;
+    }
+    .skill-side p{
+        font-size: 0.8em;
+    }
+    .skill-side ul li{
+        font-size: 0.9em;
+    }
+    .projects{
+        gap: 20px;
+        padding: 10px;
+        flex-wrap: wrap;
+
+        }
+    .project-details h1{
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    .project-details>p{
+        margin-bottom: 5px;
+        font-size: 0.8em;
+    }
+    .project-details h2{
+        font-size: 1.1em;
+        margin-bottom: 8px;
+    }
+    .project-details h3{
+        margin-bottom: 8px;
+        font-size: 0.8em;
+    }
+    .project-details p{
+        font-size: 0.7em;
+        line-height: 1.5em;
+    }
+    .project-details button{
+        padding:  8px 20px;
+        margin-top: 20px;
+        background-color: inherit;
+        border: 1px solid;
+        border-radius: 8px;
+    }
+    .project-details button a{
+        font-size: 1.1em;
+    }
+    .contact-me-section{
+        width: 100%;
+        margin: auto;
+    }
+    .contact-me-form h1{
+        font-size: 2.2em;
+    }
+    .contact-me-form input{
+        outline: none;
+    }
+    .contact-me-form form button{
+        background-color: black;
+        padding: 8px 15px;
+        width: 30%;
+        margin: auto;
+        color: #fff;
+        border-radius: 8px;
     }
 }
 
