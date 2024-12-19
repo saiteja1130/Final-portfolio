@@ -4,7 +4,10 @@ let navLink=document.querySelectorAll(".nav-link");
 let homeCon=document.querySelector(".name");
 let aboutmeCon=document.querySelector(".about-me");
 let mainCon=document.querySelector(".main");
-let skillsSet=document.querySelector(".skills");
+let skillCon=document.querySelector(".skills-box");
+let projectCon=document.querySelector(".projects-box");
+let contactMe=document.querySelector(".contact-me-section");
+let contactMeIcon=document.querySelector(".email-icon");
  //navItem queryselectorAll returns a node of classes list with the same name
  //loop through each node using foreach method
  //add an element to catch the every element(navActive)
@@ -26,27 +29,79 @@ navItem.forEach(navMenu=>{
             homeCon.classList.remove("hidden");
             aboutmeCon.classList.add("hidden");
             aboutmeCon.classList.remove("visible");
-            skillsSet.classList.add("hidden");
-            skillsSet.classList.remove("visible-grid");
+            skillCon.classList.remove("visible");
+            skillCon.classList.add("hidden");
+            projectCon.classList.remove("visible");
+            projectCon.classList.add("hidden");
+            contactMe.classList.remove("visible");
+            contactMe.classList.add("hidden");
+            
         }
         else if(navMenu.innerText=="About Me"){
             homeCon.classList.remove("visible");
             homeCon.classList.add("hidden");
             aboutmeCon.classList.add("visible");
             aboutmeCon.classList.remove("hidden");
-            skillsSet.classList.add("hidden");
-            skillsSet.classList.remove("visible-grid");
+            skillCon.classList.remove("visible");
+            skillCon.classList.add("hidden");
+            projectCon.classList.remove("visible");
+            projectCon.classList.add("hidden");
+            contactMe.classList.remove("visible");
+            contactMe.classList.add("hidden");
+           
         }
         else if(navMenu.innerText=="Skills"){
             homeCon.classList.remove("visible");
             homeCon.classList.add("hidden");
             aboutmeCon.classList.add("hidden");
             aboutmeCon.classList.remove("visible");
-            skillsSet.classList.add("visible-grid");
-            skillsSet.classList.remove("hidden");
+            skillCon.classList.add("visible");
+            skillCon.classList.remove("hidden");
+            projectCon.classList.remove("visible");
+            projectCon.classList.add("hidden");
+            contactMe.classList.remove("visible");
+            contactMe.classList.add("hidden");
+        }
+        
+        else if(navMenu.innerText=="Projects"){
+            homeCon.classList.remove("visible");
+            homeCon.classList.add("hidden");
+            aboutmeCon.classList.add("hidden");
+            aboutmeCon.classList.remove("visible");
+            skillCon.classList.remove("visible");
+            skillCon.classList.add("hidden");
+            projectCon.classList.add("visible");
+            projectCon.classList.remove("hidden");
+            contactMe.classList.remove("visible");
+            contactMe.classList.add("hidden");
+        }
+        else{
+            homeCon.classList.remove("visible");
+            homeCon.classList.add("hidden");
+            aboutmeCon.classList.add("hidden");
+            aboutmeCon.classList.remove("visible");
+            skillCon.classList.remove("visible");
+            skillCon.classList.add("hidden");
+            projectCon.classList.remove("visible");
+            projectCon.classList.add("hidden");
+            contactMe.classList.add("visible");
+            contactMe.classList.remove("hidden");
         }
         
     })
+})
+
+contactMeIcon.addEventListener("click",()=>{
+    homeCon.classList.remove("visible");
+            homeCon.classList.add("hidden");
+            aboutmeCon.classList.add("hidden");
+            aboutmeCon.classList.remove("visible");
+            skillCon.classList.remove("visible");
+            skillCon.classList.add("hidden");
+            projectCon.classList.remove("visible");
+            projectCon.classList.add("hidden");
+            contactMe.classList.add("visible");
+            contactMe.classList.remove("hidden");
 })
 
 
