@@ -22,7 +22,8 @@ body{
     width: 100%;
     background-attachment: fixed;
     backdrop-filter: blur(10px);
-} 
+    scroll-behavior: smooth;
+}
 .nav{
  padding: 10px;
  display: flex;
@@ -89,9 +90,7 @@ body{
     position: relative;
 
 }
-.about-me{
-    display: none;
-}
+
 .name h1{
    font-size: 4.5em;
 }
@@ -112,11 +111,11 @@ body{
     0%{
         opacity: 0;
     }
-    
+
     100%{
         opacity: 1;
     }
-} 
+}
 .name button{
     padding: 8px 15px;
     margin-top: 15px;
@@ -127,6 +126,20 @@ body{
 }
 .name button a{
     color: white;
+}
+.about-me{
+    display: none;
+    animation: texttop 1s ease-in-out ;
+    overflow: hidden;
+    padding: 150px;
+}
+@keyframes texttop {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 .about-me h1{
     font-size: 2.5em;
@@ -168,23 +181,24 @@ body{
 }
 @keyframes fade {
     0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 0.2;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    75%{
-        opacity: 0.7;
+        transform: translateY(100%);
     }
     100%{
-        opacity: 1;
+        transform: translateY(0%);
     }
+    
 }
 .projects-box{
     display: none;
+    animation: projectsfade 1.5s ease-in-out;
+}
+@keyframes projectsfade {
+    0%{
+        transform: translateY(100%)
+    }
+    100%{
+        transform: translateY(0%);
+    }
 }
 .projects{
     display: flex;
@@ -226,7 +240,7 @@ body{
 }
 .contact-me{
     position: absolute;
-    bottom: 25px;
+    bottom: 55px;
     right: 30px;
 }
 .email-icon{
@@ -251,6 +265,17 @@ body{
     width: 50%;
     margin: auto;
     display: none;
+    animation: contactfrom 1s ease;
+}
+    
+@keyframes contactfrom {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+
+    }
 }
 .contact-me-form form{
     display: flex;
@@ -291,6 +316,41 @@ body{
     margin: auto;
     color: #fff;
     border-radius: 8px;
+    cursor: pointer;
+}
+.success-box{
+    display: none;
+    animation: cardfade 1s ease-in-out;
+}
+@keyframes cardfade {
+    0%{
+        transform:scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.card{
+    border: 1.5px solid black;
+    background: url('img/background.avif');
+    background-repeat: no-repeat;
+    padding: 80px;
+    border-radius: 15px;
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px black;
+}
+.card h1{
+    font-size: 1.7em;
+}
+.card button{
+    padding: 8px 35px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    float: right;
+    cursor: pointer;
 }
 @media only screen and (max-width:992px) {
     .navbar-nav{
@@ -326,6 +386,9 @@ body{
     }
     .navbar-nav .nav-item:last-child{
         display: none;
+    }
+    .about-me{
+        padding: 10px;
     }
     .skills{
         gap: 30px;
@@ -394,6 +457,17 @@ body{
         color: #fff;
         border-radius: 8px;
     }
+    .card{
+        padding: 30px;
+       
+    }
+    .card h1{
+        font-size: 1em;
+    }
+    .card button{
+        float: none;
+    }
+
 }
 
 
@@ -409,5 +483,5 @@ body{
 }
 
 @media only screen and (min-width:1401px) and (max-width:1600px) {
-    
+
 }
