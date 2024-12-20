@@ -69,9 +69,52 @@ contactMeIcon.addEventListener("click",()=>{
     showSection(contactMe);
 })
 
-submitBtn.addEventListener("click",()=>{
-    showSection(sucessBox);
-})
+
 afterSubmitBtn.addEventListener("click", ()=>{
     showSection(homeCon);
+})
+
+
+
+const userName=document.getElementById("username");
+const userEmail=document.getElementById("userEmail");
+const userNumber=document.getElementById("userNumber");
+const userAbout=document.getElementById("userAbout");
+let errorMsg=document.querySelectorAll(".errorMsg");
+let errorInput="! This field is Mandatory";
+submitBtn.addEventListener("click",(event)=>{
+    if((userName.value=='') || (userEmail.value=='') || (userNumber.value=='') || (userAbout.value=='')){
+            if(userName.value==''){
+                userName.style.border="2px solid red";
+                errorMsg[0].innerText=errorInput;
+            }
+            else{
+                userName.style.border="1px solid black"
+            }
+            if(userEmail.value==''){
+                userEmail.style.border="2px solid red";
+                errorMsg[1].innerText=errorInput;
+            }
+            else{
+                userEmail.style.border="1px solid black"
+            }
+            if(userNumber.value==''){
+                userNumber.style.border="2px solid red";
+                errorMsg[2].innerText=errorInput;
+            }
+            else{
+                userNumber.style.border="1px solid black"
+            }
+            if(userAbout.value==''){
+                userAbout.style.border="2px solid red";
+                errorMsg[3].innerText=errorInput;
+            }
+            else{
+                userAbout.style.border="1px solid black"
+            }
+        event.preventDefault();
+    }
+    else{
+        showSection(sucessBox);
+    }
 })
