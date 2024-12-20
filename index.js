@@ -23,110 +23,55 @@ navItem.forEach((navActive)=>{
         navActive.classList.add("active");
     })
 })
-
+//created a function to reuse the code
+//it will take one parameter(sections) that we pass when we clicked on the Navlinks
+//next we created an array of variables that we declared and we iterate through each array using forEach loop
+//forEach loop takes one argument (sectionEle) and checks if the sectionEle is equal to sections parameter is
+//they are equal then it executes the if block and add classes other wise it will executes the else block
+function showSection(sections){
+    const section=[homeCon,aboutmeCon,sucessBox,contactMeIcon,skillCon,projectCon,contactMe,contactMeIcon]
+    section.forEach(sectionEle=>{
+        if(sections==sectionEle){
+            sectionEle.classList.add("visible");
+            sectionEle.classList.remove("hidden");
+        }
+        else{
+            sectionEle.classList.add("hidden");
+            sectionEle.classList.remove("visible");
+        }
+    })
+}
 navItem.forEach(navMenu=>{
   
     navMenu.addEventListener("click",()=>{
         if(navMenu.innerText=="Home"){
-            homeCon.classList.add("visible");
-            homeCon.classList.remove("hidden");
-            aboutmeCon.classList.add("hidden");
-            aboutmeCon.classList.remove("visible");
-            skillCon.classList.remove("visible");
-            skillCon.classList.add("hidden");
-            projectCon.classList.remove("visible");
-            projectCon.classList.add("hidden");
-            contactMe.classList.remove("visible");
-            contactMe.classList.add("hidden");
-            sucessBox.classList.add("hidden");
-            sucessBox.classList.remove("visible");
-            
+            showSection(homeCon);
         }
         else if(navMenu.innerText=="About Me"){
-            homeCon.classList.remove("visible");
-            homeCon.classList.add("hidden");
-            aboutmeCon.classList.add("visible");
-            aboutmeCon.classList.remove("hidden");
-            skillCon.classList.remove("visible");
-            skillCon.classList.add("hidden");
-            projectCon.classList.remove("visible");
-            projectCon.classList.add("hidden");
-            contactMe.classList.remove("visible");
-            contactMe.classList.add("hidden");
-            sucessBox.classList.add("hidden");
-            sucessBox.classList.remove("visible");
+            showSection(aboutmeCon);
            
         }
         else if(navMenu.innerText=="Skills"){
-            homeCon.classList.remove("visible");
-            homeCon.classList.add("hidden");
-            aboutmeCon.classList.add("hidden");
-            aboutmeCon.classList.remove("visible");
-            skillCon.classList.add("visible");
-            skillCon.classList.remove("hidden");
-            projectCon.classList.remove("visible");
-            projectCon.classList.add("hidden");
-            contactMe.classList.remove("visible");
-            contactMe.classList.add("hidden");
-            sucessBox.classList.add("hidden");
-            sucessBox.classList.remove("visible");
+            showSection(skillCon);
         }
         
         else if(navMenu.innerText=="Projects"){
-            homeCon.classList.remove("visible");
-            homeCon.classList.add("hidden");
-            aboutmeCon.classList.add("hidden");
-            aboutmeCon.classList.remove("visible");
-            skillCon.classList.remove("visible");
-            skillCon.classList.add("hidden");
-            projectCon.classList.add("visible");
-            projectCon.classList.remove("hidden");
-            contactMe.classList.remove("visible");
-            contactMe.classList.add("hidden");
-            sucessBox.classList.add("hidden");
-            sucessBox.classList.remove("visible");
+            showSection(projectCon);
         }
         else{
-            homeCon.classList.remove("visible");
-            homeCon.classList.add("hidden");
-            aboutmeCon.classList.add("hidden");
-            aboutmeCon.classList.remove("visible");
-            skillCon.classList.remove("visible");
-            skillCon.classList.add("hidden");
-            projectCon.classList.remove("visible");
-            projectCon.classList.add("hidden");
-            contactMe.classList.add("visible");
-            contactMe.classList.remove("hidden");
-            sucessBox.classList.add("hidden");
-            sucessBox.classList.remove("visible");
+            showSection(contactMe);
         }
         
     })
 })
 
 contactMeIcon.addEventListener("click",()=>{
-    homeCon.classList.remove("visible");
-            homeCon.classList.add("hidden");
-            aboutmeCon.classList.add("hidden");
-            aboutmeCon.classList.remove("visible");
-            skillCon.classList.remove("visible");
-            skillCon.classList.add("hidden");
-            projectCon.classList.remove("visible");
-            projectCon.classList.add("hidden");
-            contactMe.classList.add("visible");
-            contactMe.classList.remove("hidden");
-            sucessBox.classList.add("hidden");
-            sucessBox.classList.remove("visible");
+    showSection(contactMe);
 })
 
 submitBtn.addEventListener("click",()=>{
-    sucessBox.classList.add("visible");
-    contactMe.classList.remove("visible");
-    contactMe.classList.add("hidden");
+    showSection(sucessBox);
 })
 afterSubmitBtn.addEventListener("click", ()=>{
-    homeCon.classList.add("visible");
-    homeCon.classList.remove("hidden");
-    sucessBox.classList.remove("visible");
-    sucessBox.classList.add("hidden");
+    showSection(homeCon);
 })
