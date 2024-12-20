@@ -29,7 +29,7 @@ navItem.forEach((navActive)=>{
 //forEach loop takes one argument (sectionEle) and checks if the sectionEle is equal to sections parameter is
 //they are equal then it executes the if block and add classes other wise it will executes the else block
 function showSection(sections){
-    const section=[homeCon,aboutmeCon,sucessBox,contactMeIcon,skillCon,projectCon,contactMe,contactMeIcon]
+    const section=[homeCon,aboutmeCon,sucessBox,skillCon,projectCon,contactMe]
     section.forEach(sectionEle=>{
         if(sections==sectionEle){
             sectionEle.classList.add("visible");
