@@ -33,7 +33,7 @@
                     <h1>Im Saiteja</h1>
                     <h1><span>Front End</span> <span>Web</span> <span>Devoloper</span></h1>
                     <button>
-                        <a href="#" download>Download Resume</a>
+                        <a href="img/resumesaitejasanku.pdf" download>Download Resume</a>
                     </button>
                 </div>
                 <div class="about-me">
@@ -92,7 +92,7 @@
                                 Next Steps: <br>
                                 Implementing real-time features like a functional cart and animations for a smoother user experience.
                                </p> 
-                               <button><a href="#">Get Project</a></button>
+                               <button><a href="https://saiteja1130.github.io/Swiggy-clone/swiggy.html" target="_blank">Get Project</a></button>
                         </div>
                         <div class="project-details">
                             <h1>Project Name:Personal Portfolio</h1>
@@ -117,13 +117,17 @@
                         <h1>Lets Work Together</h1>
                         <form >
                             <label for="name">Name:</label>
-                            <input type="text" placeholder="Enter Your Full Name">
+                            <input type="text" id="username" placeholder="Enter Your Full Name">
+                            <p class="errorMsg"></p>
                             <label for="email">Email Id:</label>
-                            <input type="email" placeholder="Enter Your Email-Id">
+                            <input type="email" id="userEmail" placeholder="Enter Your Email-Id">
+                            <p class="errorMsg"></p>
                             <label for="mobile">Mobile Number</label>
-                            <input type="text">
+                            <input type="text" id="userNumber">
+                            <p class="errorMsg"></p>
                             <label for="tellAboutUrSelf">Tell Us About Your Self</label>
-                            <textarea name="" id="" rows="8"></textarea>   
+                            <textarea name="" rows="8" id="userAbout"></textarea>   
+                            <p class="errorMsg"></p>
                             <button type="submit" class="submit-btn">Send</button>                     
                         </form>
                     </div>
